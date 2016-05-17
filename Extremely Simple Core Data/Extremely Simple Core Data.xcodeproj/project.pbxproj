@@ -12,6 +12,11 @@
 		FFF32BC71CEBAFE500EE26F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF32BC51CEBAFE500EE26F6 /* Main.storyboard */; };
 		FFF32BC91CEBAFE500EE26F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFF32BC81CEBAFE500EE26F6 /* Assets.xcassets */; };
 		FFF32BCC1CEBAFE500EE26F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF32BCA1CEBAFE500EE26F6 /* LaunchScreen.storyboard */; };
+		FFF32BD41CEBD5D900EE26F6 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32BD31CEBD5D900EE26F6 /* Stack.swift */; };
+		FFF32BD71CEBD88900EE26F6 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFF32BD51CEBD88900EE26F6 /* Model.xcdatamodeld */; };
+		FFF32BDA1CEBDB2900EE26F6 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32BD81CEBDB2900EE26F6 /* Person+CoreDataProperties.swift */; };
+		FFF32BDB1CEBDB2900EE26F6 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32BD91CEBDB2900EE26F6 /* Person.swift */; };
+		FFF32BDE1CEBDE0600EE26F6 /* PersonController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF32BDD1CEBDE0600EE26F6 /* PersonController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		FFF32BC81CEBAFE500EE26F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFF32BCB1CEBAFE500EE26F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFF32BCD1CEBAFE500EE26F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFF32BD31CEBD5D900EE26F6 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		FFF32BD61CEBD88900EE26F6 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FFF32BD81CEBDB2900EE26F6 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FFF32BD91CEBDB2900EE26F6 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FFF32BDD1CEBDE0600EE26F6 /* PersonController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +66,26 @@
 			children = (
 				FFF32BC11CEBAFE500EE26F6 /* AppDelegate.swift */,
 				FFF32BC31CEBAFE500EE26F6 /* ViewController.swift */,
+				FFF32BDD1CEBDE0600EE26F6 /* PersonController.swift */,
+				FFF32BDC1CEBDB3100EE26F6 /* Core Data */,
+				FFF32BD31CEBD5D900EE26F6 /* Stack.swift */,
+				FFF32BD51CEBD88900EE26F6 /* Model.xcdatamodeld */,
 				FFF32BC51CEBAFE500EE26F6 /* Main.storyboard */,
 				FFF32BC81CEBAFE500EE26F6 /* Assets.xcassets */,
 				FFF32BCA1CEBAFE500EE26F6 /* LaunchScreen.storyboard */,
 				FFF32BCD1CEBAFE500EE26F6 /* Info.plist */,
 			);
 			path = "Extremely Simple Core Data";
+			sourceTree = "<group>";
+		};
+		FFF32BDC1CEBDB3100EE26F6 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				FFF32BD81CEBDB2900EE26F6 /* Person+CoreDataProperties.swift */,
+				FFF32BD91CEBDB2900EE26F6 /* Person.swift */,
+			);
+			name = "Core Data";
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +159,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFF32BDB1CEBDB2900EE26F6 /* Person.swift in Sources */,
 				FFF32BC41CEBAFE500EE26F6 /* ViewController.swift in Sources */,
+				FFF32BDA1CEBDB2900EE26F6 /* Person+CoreDataProperties.swift in Sources */,
+				FFF32BD41CEBD5D900EE26F6 /* Stack.swift in Sources */,
 				FFF32BC21CEBAFE500EE26F6 /* AppDelegate.swift in Sources */,
+				FFF32BDE1CEBDE0600EE26F6 /* PersonController.swift in Sources */,
+				FFF32BD71CEBD88900EE26F6 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,8 +315,22 @@
 				FFF32BD21CEBAFE500EE26F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FFF32BD51CEBD88900EE26F6 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FFF32BD61CEBD88900EE26F6 /* Model.xcdatamodel */,
+			);
+			currentVersion = FFF32BD61CEBD88900EE26F6 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FFF32BB61CEBAFE500EE26F6 /* Project object */;
 }
